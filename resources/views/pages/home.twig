@@ -1,0 +1,144 @@
+{% extends 'layouts/main.twig' %}
+
+{% block content %}
+<!-- HERO -->
+<section class="hero hero-bg d-flex justify-content-center align-items-center">
+	<div class="container">
+	    <div class="row">
+
+	        <div class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
+	            <div class="hero-text">
+
+	                <h1 class="text-white" data-aos="fade-up">Cet été, apprenez le français en France !</h1>
+	                <p class="text-white mt-3" data-aos="fade-up" data-aos-delay="100">
+	                	<strong>Depuis 1930</strong>, les Cours d'Eté pour Etudiants Etrangers de Nancy accueillent chaque année durant l'été des étrangers venant de tous horizons pour des séjours linguistiques de une à quatre semaines.
+					</p>
+					<p class="text-white mt-3" data-aos="fade-up" data-aos-delay="100">
+						Une occasion d'allier études et plaisir dans une ville universitaire fréquentée par plus de <strong>45 000 étudiants</strong>. Apprenez le français tout en découvrant la France et sa culture.
+					</p>
+					<strong class="d-block py-3 pl-5 text-white" data-aos="fade-up" data-aos-delay="200"></strong>
+	              </div>
+	        </div>
+            <div class="col-lg-6 col-12 d-flex align-items-end flex-column">
+             	<div class="hero-image" data-aos="fade-up" data-aos-delay="300">
+             		{% include 'layouts/image_mosaic.blade.php' %}
+             	</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+     <!-- ABOUT -->
+     <section class="about section-padding pb-0" id="about">
+          <div class="container">
+
+               <div class="row">
+					<div class="card-deck" data-aos="fade-up" data-aos-delay="100">
+						{% for card in params.cards %}
+							{% include 'layouts/card.blade.php' with card %}
+						{% endfor %}
+					</div>
+                    <div class="col-lg-7 mx-auto col-md-10 col-12">
+                         <div class="about-info"></div>
+
+                         <div class="about-image" data-aos="fade-up" data-aos-delay="400">
+
+                          <img src="/assets/images/logo/logo.png" class="img-fluid" alt="office" width="200">
+                        </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+
+     <!-- PROJECT -->
+     <section class="project section-padding" id="project">
+          <div class="container-fluid">
+               <div class="row">
+
+                    <div class="col-lg-12 col-12">
+
+                        <h2 class="mb-5 text-center" data-aos="fade-up">
+                            Ils témoignent ...
+                            <strong>L'expérience unique </strong>
+                        </h2>
+
+                         <div class="owl-carousel owl-theme" data-items="1"  data-sm-items="2" id="project-slide">
+                         	{% for testimonie in params.testimonies%}
+                              	<div class="item project-wrapper" data-aos="fade-up" data-aos-delay="100">
+                                   	<img src="{{ testimonie.image }}" class="image-caste img-fluid" alt="project image">
+
+                                   	<div class="project-info">
+
+                                        <div class="project-info">
+                                             <a href="project-detail.html">
+                                                  <span>{{ testimonie.message|slice(0, 200) ~ ' ...'|raw }}</span>
+                                                  <i class="fa fa-angle-right project-icon"></i>
+                                             </a>
+                                        </div>
+                                        <p class="text-right"><small>{{ testimonie.identity|raw }}</small></p>
+
+                                   	</div>
+                              	</div>
+                          	{% endfor %}
+                              <div class="item project-wrapper" data-aos="fade-up">
+                                   <img src="/assets/images/project/project-image02.jpg" class="img-fluid" alt="project image">
+
+                                   <div class="project-info">
+                                        <small>Website</small>
+
+                                        <h3>
+                                             <a href="project-detail.html">
+                                                  <span>Smart Ladies</span>
+                                                  <i class="fa fa-angle-right project-icon"></i>
+                                             </a>
+                                        </h3>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+
+     <!-- TESTIMONIAL -->
+     <section class="testimonial section-padding">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-lg-6 col-md-5 col-12">
+                        <div class="contact-image" data-aos="fade-up">
+
+                          <img src="/assets/images/female-avatar.png" class="img-fluid" alt="website">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-7 col-12">
+                      <h4 class="my-5 pt-3" data-aos="fade-up" data-aos-delay="100">Client Testimonials</h4>
+
+                      <div class="quote" data-aos="fade-up" data-aos-delay="200"></div>
+
+                      <h2 class="mb-4" data-aos="fade-up" data-aos-delay="300">Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo.</h2>
+
+                      <p data-aos="fade-up" data-aos-delay="400">
+                        <strong>Mary Zoe</strong>
+
+                        <span class="mx-1">/</span>
+
+                        <small>Digital Agency (CEO)</small>
+                      </p>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+  </section>
+
+
+{% endblock %}
+
