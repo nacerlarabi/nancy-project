@@ -15,31 +15,26 @@
                 <table class="table table-responsive-lg table-bordered" data-aos="fade-up" data-aos-delay="200">
                     <thead>
                     <tr>
-                        <th scope="col">Rôle</th>
                         <th scope="col">Nom et prénom du membre</th>
                         <th scope="col">Profession</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <th scope="row">Président</th>
-                        <td>Pr Jean-pierre HUSSON</td>
-                        <td>Professeur de géographie à l’Université de Lorraine, membre titulaire de l’Académie de Stanislas</td>
+                        <td>{!! explode(",", $content['administration_team|p2'])[0] !!}</td>
+                        <td>{!! $content['administration_team|p2'] !!}</td>
                     </tr>
                     <tr>
-                        <th scope="row">Secrétaire</th>
-                        <td>Dr Laurence KOHN-PIREAUX</td>
-                        <td>Maîtresse de Conférences en Littérature générale et comparée à l’Université de Lorraine</td>
+                        <td>{!! explode(",", $content['administration_team|p3'])[0] !!}</td>
+                        <td>{!! $content['administration_team|p3'] !!}</td>
                     </tr>
                     <tr>
-                        <th scope="row">Trésorière</th>
-                        <td>Mme Lorraine CHAUMONT</td>
-                        <td>Attachée de Direction à ICN Business School à Nancy</td>
+                        <td>{!! explode(",", $content['administration_team|p4'])[0] !!}</td>
+                        <td>{!! $content['administration_team|p4'] !!}</td>
                     </tr>
                     <tr>
-                        <th scope="row">Trésorière adjointe</th>
-                        <td>Dr Françoise VIRY-BABEL</td>
-                        <td>Docteure en médecine au Centre Hospitalier Universitaire de Nancy</td>
+                        <td>{!! explode(",", $content['administration_team|p5'])[0] !!}</td>
+                        <td>{!! $content['administration_team|p5'] !!}</td>
                     </tr>
                     </tbody>
                 </table>
@@ -54,20 +49,20 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td>Dr Lucie KEMPF</td>
-                        <td>Maîtresse de Conférences à l'Université de Lorraine, responsable de la licence LLCER russe</td>
+                        <td>{!! explode(",", $content['administration_team|p6'])[0] !!}</td>
+                        <td>{!! $content['administration_team|p6'] !!}</td>
                     </tr>
                     <tr>
-                        <td>Dr Philippe BRUANT</td>
-                        <td>Docteur en Géographie de l’Université de Nancy, historien, guide-conférencier</td>
+                        <td>{!! explode(",", $content['administration_team|p7'])[0] !!}</td>
+                        <td>{!! $content['administration_team|p7'] !!}</td>
                     </tr>
                     <tr>
-                        <td>Pr Patrick CORBET</td>
-                        <td>Professeur d’Histoire médiévale à l’Université de Lorraine</td>
+                        <td>{!! explode(",", $content['administration_team|p8'])[0] !!}</td>
+                        <td>{!! $content['administration_team|p8'] !!}</td>
                     </tr>
                     <tr>
-                        <td>Dr Alain LITAIZE</td>
-                        <td>spécialiste de dialectologie lorraine romane</td>
+                        <td>{!! explode(",", $content['administration_team|p9'])[0] !!}</td>
+                        <td>{!! $content['administration_team|p9'] !!}</td>
                     </tr>
                     </tbody>
                 </table>

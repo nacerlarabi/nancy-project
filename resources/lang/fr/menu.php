@@ -1,0 +1,10 @@
+<?php
+
+return [
+
+    'PROGRAMME' => 'PROGRAMME',
+    'INSCRIPTION' => 'INSCRIPTION',
+    'DE NOUS A VOUS' => 'DE NOUS A VOUS',
+    'VOTRE SEJOUR' => 'VOTRE SEJOUR'
+
+];

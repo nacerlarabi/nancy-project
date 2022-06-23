@@ -37,25 +37,32 @@ class HomeController extends Controller
     public function getCards()
     {
         $card1 = [
-            'title' => "LES COURS",
+            'title' => $this->content["home|title"],
             'imagealt' => "courses",
             'imagesrc' => "images/project/7_.jpg",
-            'content' => $this->content["home|initCourse1"],
+            'content' => $this->content["home|init1"],
             /*"<p><strong>Les cours</strong> sont donnés par des professeurs de l’université spécialisés dans l'enseignement de la langue française à des étrangers. Le contenu de ces cours est adapté à votre niveau, que vous soyez débutant ou professeur de français à l'étranger.</p>
 			<p>Participez, parmi les nombreuses options offertes l'après-midi, aux conférences, ateliers linguistiques ou à <strong>l’atelier théâtre</strong>. Tous les outils de communication sont à votre disposition sur place : salle informatique et connexions wifi.</p>",
 */
             'more' => '<a href="#">Tout savoir sur les cours</a>'
         ];
         $card2 = [
-            'title' => "LES ACTIVITES",
+            'title' => $this->content["home|titleActivities"],
             'imagealt' => "activities",
             'imagesrc' => "images/project/22_.jpg",
-            'content' => "<p>En dehors des cours, de nombreuses <strong>excursions</strong> sont au programme de votre séjour, comme par exemple un week-end à <strong>Paris</strong>, capitale de la France, la découverte d’une région française typique. En 2020 : Bordeaux et son vignoble, avec une visite-dégustation au Château Fourcas Hosten (Listrac-Médoc), une découverte du village de Saint-Emilion et l’ascension de la spectaculaire dune du Pilat.</p>
-			<p>Des <strong>animations</strong> sont proposées le soir et le week-end. Vous pouvez ainsi prendre part à des barbecues, des projections de films ou des balades dans nos belles régions françaises.</p>",
-            'more' => '<a href="#">Tout savoir sur les activités</a>'
+            'content' => $this->content["home|activities1"],
+            'more' => '<a href="#">Tout savoir sur les cours</a>'
         ];
 
-        return [$card1, $card2, $card1];
+        $card3 = [
+            'title' => $this->content["home|titleNancy"],
+            'imagealt' => "nancy",
+            'imagesrc' => "https://stage.france-summercourses.fr/images/project/10_.jpg",
+            'content' => $this->content["home|nancy1"],
+            'more' => '<a href="#">Tout savoir sur les cours</a>'
+        ];
+
+        return [$card1, $card2, $card3];
     }
 
     public function getTestimonies()

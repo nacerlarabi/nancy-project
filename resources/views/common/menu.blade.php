@@ -4,7 +4,7 @@
                 @foreach($menu as $menuTab)
                     <li class="nav-item @if($menuTab['submenu']) dropdown @endif">
                         <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="underlineEffect">{{ $menuTab['title'] }}</span>
+                            <span class="underlineEffect">{{ __('menu.'.$menuTab['title']) }}</span>
                         </a>
                         @if (isset($menuTab['submenu']))
                             @if ($menuTab['type'] === "simple")
@@ -19,7 +19,6 @@
                                         @include ('common.grouped-submenu', ['subMenu'])
                                     @endforeach
                                 </ul>
-
                             @endif
                         @endif
                     </li>

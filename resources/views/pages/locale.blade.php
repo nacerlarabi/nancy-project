@@ -17,7 +17,7 @@
     </div>
     <!-- Intro -->
     <div id="intro">Welcome to<br />
-        <h1>French Summer Courses</h1>
+        <h1>France Summer Courses</h1>
         <p>Choisissez votre langue </p>
         <p>Choose your language</p>
         <p>Выберите свой язык</p>
@@ -40,7 +40,7 @@
                     <img src="{{ asset('images/countries/head_en.png') }}" label="English"/>
                 </a>
             </li>
-            <li class=""">
+            <li class="">
                 <a href="/locale/fr/">
                     <img src="{{ asset('images/countries/head_fr.png') }}" label="French"/>
                 </a>
