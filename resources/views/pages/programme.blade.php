@@ -187,29 +187,10 @@
     </div>
     <!-- fin atelier theatre -->
     <!-- début section sorties -->
-    <section id="weekend-paris" class="position-relative pb-lg-8 pt-lg-9 bg-dark" data-aos="fade-up" data-aos-delay="200">
-        <div class="bg-img-holder top-0 left-0 col-lg-6 zindex-2" data-bg-size="cover" style="background-image: url(https://via.placeholder.com/300/;); background-position: initial; background-size: cover; opacity: 1; height: 100%;">
-            <span class="mask bg-dark opacity-6"></span>
-            <img alt="Image placeholder" src="{{ asset('images/project/25_.jpg') }}">
-        </div>
-        <div class="container py-6">
-            <div class="row">
-                <div class="col-lg-5 ml-lg-auto">
-                    <div class="text-center text-lg-left">
-                        <h2 class="h1 text-white mb-3"  data-content="paris|title1"><strong>{!! $content["paris|title1"] !!}</strong></h2>
-                        <p class="lead text-muted lh-180" data-content="paris|p1">{!! $content["paris|p1"] !!}</p>
-                        <p class="lead text-muted lh-180" data-content="paris|p2">{!! $content["paris|p2"] !!}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <section id="weekend-paris" class="position-relative pb-lg-8 pt-lg-9 bg-dark">
-        <div class="bg-img-holder top-0 right-0 col-lg-6 zindex-2" data-bg-size="cover" style="background-image: url(https://via.placeholder.com/300/;); background-position: initial; background-size: cover; opacity: 1; height: 100%;">
-            <span class="mask bg-dark opacity-6"></span>
-            <img alt="Image placeholder" src="{{ asset('images/project/25_.jpg') }}">
-        </div>
+
         <div class="container py-0">
             <div class="row">
                 <div class="col-lg-5 pt-lg-4 pb-0">
@@ -225,6 +206,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -249,7 +231,7 @@
         </div>
     </section>
     <section id="grande-excursion" class="position-relative pb-lg-8 bg-dark">
-        <div class="bg-img-holder top-0 right-0 col-lg-6 zindex-2" data-bg-size="200" style="background-image: url(https://via.placeholder.com/200/;); background-position: initial; background-size: cover; opacity: 1; height: 100%;"  data-aos="fade-up" data-aos-delay="200">
+        <div class="bg-img-holder top-0 right-0 col-lg-6 zindex-4" data-bg-size="200" style="background-image: url(https://via.placeholder.com/200/;); background-position: initial; background-size: cover; opacity: 1; height: 100%;"  data-aos="fade-up" data-aos-delay="200">
             <span class="mask bg-primary opacity-6"></span>
             <img alt="Image placeholder" src="{{ asset('images/project/25_.jpg') }}">
         </div>
@@ -266,7 +248,7 @@
     </section>
     <section id="grande-excursion" class="position-relative pb-lg-8 bg-dark">
         <div class="bg-img-holder top-0 left-0 col-lg-6 zindex-2" data-bg-size="200" style="background-image: url(https://via.placeholder.com/200/;); background-position: initial; background-size: cover; opacity: 1; height: 100%;"  data-aos="fade-up" data-aos-delay="200">
-            <span class="mask bg-primary opacity-6"></span>
+            <span class="bg-primary opacity-6"></span>
             <img alt="Image placeholder" src="{{ asset('images/project/25_.jpg') }}">
         </div>
         <div class="container py-6">
@@ -279,7 +261,8 @@
                 </div>
             </div>
         </div>
-    </section>    <section id="grande-excursion" class="position-relative pb-lg-8 bg-dark">
+    </section>
+    <section id="grande-excursion" class="position-relative pb-lg-8 bg-dark">
         <div class="bg-img-holder top-0 right-0 col-lg-6 zindex-2" data-bg-size="200" style="background-image: url(https://via.placeholder.com/200/;); background-position: initial; background-size: cover; opacity: 1; height: 100%;"  data-aos="fade-up" data-aos-delay="200">
             <span class="mask bg-primary opacity-6"></span>
             <img alt="Image placeholder" src="{{ asset('images/project/25_.jpg') }}">
@@ -287,21 +270,6 @@
         <div class="container py-0">
             <div class="row">
                 <div class="col-lg-5 pt-lg-4 pb-0">
-                    <div class="text-lg-left">
-                        <h4 class="h1 text-white mb-3"  data-content="grande_excursion|title4"><strong>{!! $content["grande_excursion|title4"] !!}</strong></h4>
-                        <p class="lead lh-180 text-muted" data-content="grande_excursion|p4">{!! $content["grande_excursion|p4"] !!}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>    <section id="grande-excursion" class="position-relative pb-lg-8 bg-dark">
-        <div class="bg-img-holder top-0 left-0 col-lg-6 zindex-2" data-bg-size="200" style="background-image: url(https://via.placeholder.com/200/;); background-position: initial; background-size: cover; opacity: 1; height: 100%;"  data-aos="fade-up" data-aos-delay="200">
-            <span class="mask bg-primary opacity-6"></span>
-            <img alt="Image placeholder" src="{{ asset('images/project/25_.jpg') }}">
-        </div>
-        <div class="container py-6">
-            <div class="row">
-                <div class="col-lg-5 ml-lg-auto">
                     <div class="text-lg-left">
                         <h4 class="h1 text-white mb-3"  data-content="grande_excursion|title10"><strong>{!! $content["grande_excursion|title10"] !!}</strong></h4>
                         <p class="lead lh-180 text-muted" data-content="grande_excursion|p10">{!! $content["grande_excursion|p10"] !!}</p>

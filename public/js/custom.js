@@ -2,11 +2,8 @@
   $(function () {
       var registrationData = {"_token": "{{ csrf_token() }}" };
 
-      console.log('hello');
 
       $('#modal1-button').click(function (){
-
-          console.log('modal1');
 
           registrationData["gender"] = $('input[name=gender]').val();
           registrationData["status"] = $('input[name=status]').val();
@@ -18,8 +15,6 @@
       });
 
       $('#modal2-button').click(function (){
-
-          console.log('modal2');
 
           registrationData["address"] = $('input[name=address]').val();
           registrationData["zipcode"] = $('input[name=zipcode]').val();
@@ -33,15 +28,11 @@
 
       $('#modal3-button').click(function (){
 
-          console.log('modal3');
-
           registrationData["courses_choice"] = $('input[name=courses-choice]').val();
 
       });
 
       $('#modal4-button').click(function (){
-
-          console.log('modal4');
 
           registrationData["level"] = $('input[name=level]').val();
           registrationData["level_certificate"] = $('input[name=level-certificate]').val();
@@ -49,8 +40,6 @@
       });
 
       $('#modal5-button').click(function (){
-
-          console.log('modal5');
 
           registrationData["staying_type"] = $('input[name=staying-type]').val();
           registrationData["hire_about_us"] = $('input[name=hire-about-us]').val();

@@ -119,4 +119,7 @@ class ContentService {
 
         return view('content_ok');
     }
+
+
+
 }

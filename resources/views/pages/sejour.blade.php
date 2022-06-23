@@ -5,7 +5,7 @@
 <section class="slice slice-lg bg-section-secondary" id="hebergement">
     <div class="container">
         <div class="text-center">
-            <h1 class="fh5co-lead to-animate fadeIn animated"><strong>SÉJOUR ET HÉBERGEMENT</strong></h1>
+            <h1 style="padding-top: 40px;" class="fh5co-lead to-animate fadeIn animated"><strong>SÉJOUR ET HÉBERGEMENT</strong></h1>
         </div>
         <div class="row mt-5">
             <div class="col-xl-6">
@@ -113,7 +113,7 @@
         <div class="col-md-4 reassurance" style="display: flex;">
             <div class="card shadow reassurance-element" style="display: flex;">
                 <p class="text-center">
-                    <img src="../assets/images/project/31_.jpeg" style="height: 300px; width: 100%;">
+                    <img src="https://www.france-summercourses.com/common/nancy_01.gif" style="height: 300px; width: 100%;">
                 </p>
                 <div class="card-body" style="display: flex;">
                     <div class="d-flex align-items-start">
@@ -135,7 +135,7 @@
             <div class="card shadow reassurance-element" style="display: flex;">
 
                 <p class="text-center">
-                    <img src="../assets/images/project/31_.jpeg" style="height: 300px; width: 100%;">
+                    <img src="https://www.france-summercourses.com/common/nancy_02.gif" style="height: 300px; width: 100%;">
                 </p>
                 <div class="card-body" style="display: flex;">
                     <div class="d-flex align-items-start">
@@ -153,7 +153,7 @@
         <div class="col-md-4 reassurance" style="display: flex;">
             <div class="card shadow reassurance-element" style="display: flex;">
                 <p class="text-center">
-                    <img src="../assets/images/project/31_.jpeg" style="height: 300px; width: 100%;">
+                    <img src="https://www.france-summercourses.com/common/nancy_03.gif" style="height: 300px; width: 100%;">
                 </p>
                 <div class="card-body">
                     <div class="icon-text px-4">
