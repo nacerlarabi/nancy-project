@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Content extends Migration
+class AddRoleColumnToUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,8 @@ class Content extends Migration
      */
     public function up()
     {
-        Schema::create('contents', function(Blueprint $table) {
-            $table->increments('id');
-            $table->string('page', 127);
-            $table->string('mnemonic', 127);
-            $table->text('content');
-            $table->enum('lang', ['fr', 'en', 'zh', 'ru']);
+        Schema::table('users', function (Blueprint $table) {
+            //
         });
     }
 
@@ -29,7 +25,8 @@ class Content extends Migration
      */
     public function down()
     {
-        Schema::drop('contents');
-
+        Schema::table('users', function (Blueprint $table) {
+            //
+        });
     }
 }

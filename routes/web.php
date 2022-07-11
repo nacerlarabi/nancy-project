@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -54,3 +58,17 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function () {
+    Route::get('/roles','AdminController@roles');
+    Route::get('/registrations','AdminController@index');
+    Route::get('/users','AdminController@users');
+    Route::post('/users/new', 'AdminController@newUser');
+    Route::get('/password/change','AdminController@changePasswordPage');
+    Route::post('/password/change/submit','AdminController@updatePassword');
+
+});
+
+
+

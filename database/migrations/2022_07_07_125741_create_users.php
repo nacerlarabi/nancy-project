@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Testimonies extends Migration
+class CreateUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class Testimonies extends Migration
      */
     public function up()
     {
-        Schema::rename('testimony', 'testimonies');
-        DB::table('testimonies')
-            ->update([
-                "picture" => DB::raw("REPLACE(picture, 'img/testimony', 'images/testimonies')")
-            ]);
+        Schema::create('users', function (Blueprint $table) {
+            $table->id();
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -27,6 +28,6 @@ class Testimonies extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('users');
     }
 }
