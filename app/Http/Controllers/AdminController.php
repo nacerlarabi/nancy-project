@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\DataTables\RolesDataTable;
+use App\DataTables\SessionSubscuptionDataTable;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\DataTables\RegistrationDataTable;
@@ -68,6 +69,15 @@ class AdminController extends Controller
         return view("admin.change-password");
 
     }
+
+    public function sessions(SessionSubscuptionDataTable $dataTable)
+    {
+        return $dataTable->render('admin.sessions');
+    }
+
+
+
+
 
 
 
