@@ -74,25 +74,64 @@
     <link rel="stylesheet" href="/css/admin_custom.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.css" integrity="sha512-gp+RQIipEa1X7Sq1vYXnuOW96C4704yI1n0YB9T/KqdvqaEgL6nAuTSrKufUX3VBONq/TPuKiXGLVgBKicZ0KA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
+    <link rel="stylesheet" href="/vendor/adminlte/plugins/fontawesome-free/css/all.min.css">
+
+    <link rel="stylesheet" href="/vendor/adminlte/plugins/daterangepicker/daterangepicker.css">
+
+    <link rel="stylesheet" href="/vendor/adminlte/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+
+    <link rel="stylesheet" href="/vendor/adminlte/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+
+    <link rel="stylesheet" href="/vendor/adminlte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+
+    <link rel="stylesheet" href="/vendor/adminlte/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="/vendor/adminlte/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+
+    <link rel="stylesheet" href="/vendor/adminlte/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
+
+    <link rel="stylesheet" href="/vendor/adminlte/plugins/bs-stepper/css/bs-stepper.min.css">
+
+    <link rel="stylesheet" href="/vendor/adminlte/plugins/dropzone/min/dropzone.min.css">
 @stop
 
 @section('js')
-    <script
-            src="https://code.jquery.com/jquery-3.6.0.js"
-            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-            crossorigin="anonymous"></script>
+    <script src="/vendor/adminlte/plugins/jquery/jquery.min.js"></script>
+
+    <script src="/vendor/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/vendor/adminlte/plugins/select2/js/select2.full.min.js"></script>
+
+    <script src="/vendor/adminlte/plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
+
+    <script src="/vendor/adminlte/plugins/moment/moment.min.js"></script>
+    <script src="/vendor/adminlte/plugins/inputmask/jquery.inputmask.min.js"></script>
+
+    <script src="/vendor/adminlte/plugins/daterangepicker/daterangepicker.js"></script>
+
+    <script src="/vendor/adminlte/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+
+    <script src="/vendor/adminlte/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <script src="/vendor/adminlte/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+
+    <script src="/vendor/adminlte/plugins/bs-stepper/js/bs-stepper.min.js"></script>
+
+    <script src="/vendor/adminlte/plugins/dropzone/min/dropzone.min.js"></script>
+
+    <script src="/vendor/adminlte/dist/js/adminlte.min.js?v=3.2.0"></script>
+
+    <script src="/vendor/adminlte/dist/js/demo.js"></script>
 
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-
     <script src="js/buttons.server-side.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/moment.min.js" integrity="sha512-i2CVnAiguN6SnJ3d2ChOOddMWQyvgQTzm0qSgiKhOqBMGCx4fGU5BtzXEybnKatWPDkXPFyCI0lbG42BnVjr/Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.min.js" integrity="sha512-mh+AjlD3nxImTUGisMpHXW03gE6F4WdQyvuFRkjecwuWLwD2yCijw4tKA3NsEFpA1C3neiKhGXPSIGSfCYPMlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
 
 
