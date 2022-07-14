@@ -228,7 +228,7 @@ return [
 
         [
             'text' => 'registrations',
-            'url'  => 'admin/registrations',
+            'url'  => 'admin',
           //  'can'  => 'manage-blog',
         ],
         [
@@ -239,6 +239,11 @@ return [
         [
             'text' => 'utilisateurs',
             'url'  => 'admin/users',
+            //  'can'  => 'manage-blog',
+        ],
+        [
+            'text' => 'Sessions',
+            'url'  => 'admin/sessions',
             //  'can'  => 'manage-blog',
         ],
         [

@@ -62,9 +62,10 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function () {
     Route::get('/roles','AdminController@roles');
-    Route::get('/registrations','AdminController@index');
+    Route::get('/','AdminController@index');
     Route::get('/users','AdminController@users');
     Route::post('/users/new', 'AdminController@newUser');
+    Route::get('/sessions','AdminController@sessions');
     Route::get('/password/change','AdminController@changePasswordPage');
     Route::post('/password/change/submit','AdminController@updatePassword');
 
