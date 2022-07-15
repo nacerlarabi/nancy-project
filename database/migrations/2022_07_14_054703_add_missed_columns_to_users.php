@@ -13,6 +13,7 @@ class AddMissedColumnsToUsers extends Migration
      */
     public function up()
     {
+        return false;
         Schema::table('users', function (Blueprint $table) {
             $table->string('gender');
             $table->string('firstname');
@@ -32,6 +33,7 @@ class AddMissedColumnsToUsers extends Migration
      */
     public function down()
     {
+        return false;
         Schema::table('users', function (Blueprint $table) {
             //
         });

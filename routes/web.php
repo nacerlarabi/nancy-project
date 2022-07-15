@@ -16,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //Route::controller('content', 'ContentController');
+Route::get('crop-image-upload', 'CropImageController@index');
+Route::post('crop-image-upload ', 'CropImageController@uploadCropImage');
+Route::name('test-page')->get('/testPage', 'TestPageController@index');
+Route::name('test-page-store')->post('/testPage', 'TestPageController@load');
 Route::name('get-locale')->get('/locale', 'LanguageController@index');
 Route::name('set-locale')->get('locale/{locale?}', 'LanguageController@setLocale');
 

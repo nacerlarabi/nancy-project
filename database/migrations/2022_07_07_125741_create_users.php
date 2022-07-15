@@ -16,15 +16,15 @@ class CreateUsers extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('email')->unique();
-	    $table->string('gender');
-	    $table->string('firstname');
-	    $table->string('lastname');
-	    $table->string('birthday');
+            $table->string('gender');
+            $table->string('firstname');
+            $table->string('lastname');
+            $table->string('birthday');
             $table->string('nationality');
-	    $table->string('default_phone_prefix');
-	    $table->string('default_phone_number');
+            $table->string('default_phone_prefix');
+            $table->string('default_phone_number');
             $table->string('password');
-	    $table->string('remember_token');
+            $table->string('remember_token');
             $table->timestamps();
         });
     }

@@ -1,5 +1,5 @@
 <?php
-
+//ini_set('display_errors', 1);
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 
@@ -43,13 +43,16 @@ require __DIR__.'/../vendor/autoload.php';
 | to this client's browser, allowing them to enjoy our application.
 |
 */
+try {
+    $app = require __DIR__ . '/../bootstrap/app.php';
 
-$app = require __DIR__.'/../bootstrap/app.php';
+    $kernel = $app->make(Kernel::class);
 
-$kernel = $app->make(Kernel::class);
-
-$response = tap($kernel->handle(
-    $request = Request::capture()
-))->send();
+    $response = tap($kernel->handle(
+        $request = Request::capture()
+    ))->send();
+} catch (Exception $e) {
+    var_dump($e->getMessage());
+}
 
 $kernel->terminate($request, $response);
