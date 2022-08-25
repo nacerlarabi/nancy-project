@@ -19,6 +19,14 @@ use Illuminate\Support\Facades\Route;
 Route::name('get-locale')->get('/locale', 'LanguageController@index');
 Route::name('set-locale')->get('locale/{locale?}', 'LanguageController@setLocale');
 
+Route::group(['prefix' => 'payment'], function () {
+
+    Route::get('/checkout', 'HomeController@testCheckout');
+    Route::post('/secretKey','HomeController@checkoutSecretKey');
+
+
+});
+
 Route::name('language')->get('language/{lang}', 'SessionController@language');
 Route::name('programme')->get('/programme', 'ProgrammeController@index');
 Route::name('registration')->group(function () {
@@ -66,10 +74,33 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function 
     Route::get('/users','AdminController@users');
     Route::post('/users/new', 'AdminController@newUser');
     Route::get('/sessions','AdminController@sessions');
+    Route::post('/sessions/new','AdminController@newSession');
     Route::get('/password/change','AdminController@changePasswordPage');
     Route::post('/password/change/submit','AdminController@updatePassword');
 
+    Route::get('/contents','AdminController@contents');
+    Route::get('/content/edit/{id}', 'AdminController@edit')->name('admin.content.edit');
+
+    Route::post('/content/attach/images','AdminController@attachImagesToContent');
+    Route::post('/admin/content/images/get','AdminController@getImagesFromContent');
+
+    Route::post('/content/update','AdminController@updateContent');
+
+    Route::group(['prefix' => 'images'], function(){
+
+        Route::get('bank','AdminController@bank');
+        Route::post('upload ', 'AdminController@uploadCropedImage');
+
+        Route::get('/get/ids','AdminController@getImagesIds');
+
+    });
+
+
+
 });
+
+
+
 
 
 

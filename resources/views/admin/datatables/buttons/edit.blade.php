@@ -1,0 +1,1 @@
+<a class="btn btn-primary" href="{{ route('admin.content.edit',['id' => $row->id]) }}">Modifier</a>

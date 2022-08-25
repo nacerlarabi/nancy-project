@@ -227,17 +227,17 @@ return [
     'menu' => [
 
         [
-            'text' => 'registrations',
+            'text' => 'Registrations',
             'url'  => 'admin',
           //  'can'  => 'manage-blog',
         ],
         [
-            'text' => 'roles',
+            'text' => 'Roles',
             'url'  => 'admin/roles',
             //  'can'  => 'manage-blog',
         ],
         [
-            'text' => 'utilisateurs',
+            'text' => 'Utilisateurs',
             'url'  => 'admin/users',
             //  'can'  => 'manage-blog',
         ],
@@ -246,6 +246,25 @@ return [
             'url'  => 'admin/sessions',
             //  'can'  => 'manage-blog',
         ],
+        [
+            'text' => 'Banque des images',
+            'url'  => 'admin/images/bank',
+            //  'can'  => 'manage-blog',
+        ],
+        [
+            'text' => 'Contents',
+            'submenu' => [
+                [
+                    'text' => 'Liste des contents',
+                    'url'  => 'admin/contents',
+                ],
+                [
+                    'text' => 'Modifier un content',
+                    'url'  => 'admin/contents/add',
+                ],
+                        ],
+        ],
+
         [
             'text' => 'Modifier mot de passe',
             'url'  => 'admin/password/change',

@@ -52,6 +52,5 @@ class CreateFirstUser extends Command
 
         $this->info('super-admin created succesfully');
 
-
     }
 }

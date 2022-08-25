@@ -1,0 +1,1 @@
+<span class="badge {{ $row->lang == 'fr' ? 'bg-success' : 'bg-warning' }}">{{ $row->lang }}</span>

@@ -14,14 +14,14 @@ class AddMissedColumnsToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('gender');
-            $table->string('firstname');
-            $table->string('lastname');
-            $table->string('birthday');
-            $table->string('nationality');
-            $table->string('default_phone_prefix');
-            $table->string('default_phone_number');
-            $table->string('remember_token');
+            $table->string('gender')->nullable();
+            $table->string('firstname')->nullable();
+            $table->string('lastname')->nullable();
+            $table->string('birthday')->nullable();
+            $table->string('nationality')->nullable();
+            $table->string('default_phone_prefix')->nullable();
+            $table->string('default_phone_number')->nullable();
+            $table->string('remember_token')->nullable();
         });
     }
 

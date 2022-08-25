@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Services\ContentService;
 use App\Services\TestimonyService;
+use http\Client\Response;
 use Illuminate\Http\Request;
+use function Symfony\Component\String\s;
 
 class HomeController extends Controller
 {
@@ -78,4 +80,44 @@ class HomeController extends Controller
 
         return [$testimony, $testimony, $testimony, $testimony, $testimony, $testimony, $testimony, $testimony, $testimony, $testimony];
     }
+
+    public function checkoutSecretKey(){
+
+        \Stripe\Stripe::setApiKey('sk_test_51LaGT1C7Mi5uat9wCRt1ATKcsdohYTLaKGjBsIvlUI0aa1ACl2vgkksEjO5sd2nYIMeBmNrnqvO0703rmh1Io66X00cqGdJRjr');
+
+        try {
+
+
+
+            // Create a PaymentIntent with amount and currency
+            $paymentIntent = \Stripe\PaymentIntent::create([
+                'amount' => 1400,
+                'currency' => 'eur',
+                'automatic_payment_methods' => [
+                    'enabled' => true,
+                ],
+            ]);
+
+            $output = [
+                'clientSecret' => $paymentIntent->client_secret,
+            ];
+
+            return response()->json($output);
+
+        } catch (Error $e) {
+            http_response_code(500);
+            return json_encode(['error' => $e->getMessage()]);
+        }
+
+
+    }
+
+    public function testCheckout(){
+
+        return view('pages.checkout-payment');
+
+    }
+
+
+
 }
