@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ $LANG }}">
+<html lang="{{ $LANG ?? '' }}">
 
 <head>@include('common.head', ['head' => $head])</head>
 <body style="background-color: {{ $color }}">

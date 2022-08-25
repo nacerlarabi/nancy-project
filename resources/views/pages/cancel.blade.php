@@ -1,0 +1,1 @@
+<p>Cancel payment</p>
