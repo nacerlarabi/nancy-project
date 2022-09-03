@@ -25,7 +25,16 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+<script src="https://js.stripe.com/v3/"></script>
+<script src="/checkout.js" defer></script>
+<script src="/payment.js"></script>
+<script src="/toastr.min.js"></script>
+
+
 <script>
+
+    $('[data-ssd-confirm-trigger]').ssdConfirm();
+
     $('.dropdown').hover(function(){
         console.log('test');
         $('.dropdown-toggle', this).trigger('click');

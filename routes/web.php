@@ -23,7 +23,9 @@ Route::group(['prefix' => 'payment'], function () {
 
     Route::get('/checkout', 'HomeController@testCheckout');
     Route::post('/secretKey','HomeController@checkoutSecretKey');
-
+    Route::post('/mandate/create','HomeController@createMandatePayment');
+    Route::post('/check/create','HomeController@createCheckPayment');
+    Route::post('/online/create','HomeController@createOnlinePayment');
 
 });
 
@@ -35,6 +37,7 @@ Route::name('registration')->group(function () {
 });
 
 Route::post('/registration/store', 'RegistrationController@store');
+Route::post('/registration/payment/link','RegistrationController@linkPaymentToRegistration');
 
 Route::name('hosting')->group(function () {
     Route::get('/hosting', 'HostingController@index');

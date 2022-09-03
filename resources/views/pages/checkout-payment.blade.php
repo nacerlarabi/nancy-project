@@ -18,5 +18,5 @@
         </button>
         <div id="payment-message" class="hidden"></div>
     </form>
-</body>s
+</body>
 </html>

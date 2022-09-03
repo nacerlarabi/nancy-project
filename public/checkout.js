@@ -34,9 +34,24 @@ async function handleSubmit(e) {
     const { error } = await stripe.confirmPayment({
         elements,
         confirmParams: {
-            // Make sure to change this to your payment completion page
+            redirect: "if_required",
             return_url: "http://127.0.0.1:8000/payment/checkout",
         },
+    }).then(function(result){
+
+        if(result.error){
+
+            toastr.success("Paiement validé, cliquez sur confirmer l'inscription pour finaliser votre inscription");
+
+        }
+        else{
+
+            toastr.error("Erreur dans le paiement, veuillez contacter le service techniuqe de l'application");
+
+        }
+
+
+
     });
 
     // This point will only be reached if there is an immediate error when
@@ -61,6 +76,7 @@ async function checkStatus() {
 
     if (!clientSecret) {
         return;
+
     }
 
     const { paymentIntent } = await stripe.retrievePaymentIntent(clientSecret);

@@ -2,6 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\PaymantMandate;
+use App\Models\Payment;
+use App\Models\PaymentCheck;
+use App\Models\PaymentInline;
+use App\Models\Registration;
 use App\Services\ContentService;
 use App\Services\TestimonyService;
 use http\Client\Response;
@@ -59,7 +64,7 @@ class HomeController extends Controller
         $card3 = [
             'title' => $this->content["home|titleNancy"],
             'imagealt' => "nancy",
-            'imagesrc' => "https://stage.france-summercourses.fr/images/project/10_.jpg",
+            'imagesrc' => "images/project/10_.jpg",
             'content' => $this->content["home|nancy1"],
             'more' => '<a href="#">Tout savoir sur les cours</a>'
         ];
@@ -117,6 +122,53 @@ class HomeController extends Controller
         return view('pages.checkout-payment');
 
     }
+
+
+    public function createMandatePayment(Request $request){
+
+        $payment = new Payment();
+        $payment->payment_details = "Paiement d'inscription";
+        $payment->save();
+
+        $mandatePayment = new PaymantMandate();
+        $mandatePayment->file_path = "path to file";
+        $mandatePayment->save();
+
+        $payment->payable()->associate($mandatePayment);
+
+
+
+    }
+    public function createCheckPayment(Request $request){
+
+        $payment = new Payment();
+        $payment->payment_details = "Paiement d'inscription";
+        $payment->save();
+
+        $checkPayment = new PaymentCheck();
+        $checkPayment->file_path = "path to file";
+        $checkPayment->save();
+
+        $payment->payable()->associate($checkPayment);
+
+
+    }
+    public function createOnlinePayment(Request $request){
+
+        $payment = new Payment();
+        $payment->payment_details = "Paiement d'inscription";
+        $payment->save();
+
+        $inlinePayment = new PaymentInline();
+        $inlinePayment->file_path = "path to file";
+        $inlinePayment->save();
+
+        $payment->payable()->associate($inlinePayment);
+
+    }
+
+
+
 
 
 
