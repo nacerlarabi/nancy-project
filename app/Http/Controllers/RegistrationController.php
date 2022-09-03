@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Payment;
 use App\Models\Registration;
 use App\Services\ContentService;
 use App\Services\ProgramService;
@@ -31,7 +32,7 @@ class RegistrationController extends Controller
      */
     public function index()
     {
-        return $this->view('pages.registration', [
+        return $this->view('pages.testre', [
             'content' => $this->content
         ]);
     }
@@ -58,6 +59,21 @@ class RegistrationController extends Controller
         $registration->hire_about_us = $request->hire_about_us;
         $registration->save();
 
+        return response()->json(["registration_id" => $registration->id]);
 
     }
+
+
+
+    public function linkPaymentToRegistration(Request $request){
+
+        $registration = Registration::find($request->registration_id);
+        $payment = Payment::find($request->payment_id);
+
+        $registration->payment->attach($payment);
+
+        return response()->isSuccessful();
+
+    }
+
 }

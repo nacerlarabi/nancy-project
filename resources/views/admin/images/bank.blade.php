@@ -226,7 +226,6 @@
              toastr.success('Image chargée avec succces');
         }
         });
-
         }
         });
         })

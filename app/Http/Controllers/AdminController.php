@@ -140,7 +140,6 @@ class AdminController extends Controller
         $imagesTypes = ["webp", "png", "jpg", "jpeg"];
         $imagesSizes = ["720" => "480", "1280" => "720", "1920" => "1080", "3840" => "2160", "7680" => "4320"];
 
-
         foreach ($imagesTypes as $type) {
 
             foreach ($imagesSizes as $width => $height) {
@@ -198,7 +197,6 @@ class AdminController extends Controller
         }
         else{
 
-
             Image::make($image)->resize($imageWidth, $imageHeight, function($constraint){
 
                 $constraint->aspectRatio();
@@ -232,6 +230,7 @@ class AdminController extends Controller
 
         $contentId = $request->content_id;
         $images = $request->images;
+
 
         $content = Content::find($contentId);
 

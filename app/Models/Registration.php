@@ -13,5 +13,11 @@ class Registration extends Model
 
     public $timestamps = false;
 
+    public function payment(){
+
+        return $this->hasOne(Payment::class,'registration_id');
+
+    }
+
 
 }

@@ -43,11 +43,72 @@
 
           registrationData["staying_type"] = $('input[name=staying-type]').val();
           registrationData["hire_about_us"] = $('input[name=hire-about-us]').val();
+
           saveData(registrationData);
+
+
+      });
+
+      $('#modal6-button').click(function (){
+
+
+          createPayment(registrationId);
+
 
       });
 
 
+      function createPayment(registrationId){
+
+          $.ajax({
+              type: "POST",
+              url: "/payment/online/create",
+              data: {'_token': $('meta[name="_token"]').attr('content'), 'registration_id' : registrationId },
+              success: function(){
+
+                  toastr.success('Etape de paiement finalisé, bienvenu à Nancy');
+
+              },
+          });
+
+          $.ajax({
+              type: "POST",
+              url: "/registration/payment/link",
+              data: {'_token': $('meta[name="_token"]').attr('content'), 'registration_id': registrationId,'payment_id':  paymentId},
+              success: function(){
+
+                  toastr.success('Etape de paiement finalisé, bienvenu à Nancy');
+
+              },
+          });
+
+          $.ajax({
+              type: "POST",
+              url: "/registration/payment/link",
+              data: {'_token': $('meta[name="_token"]').attr('content'), 'registration_id': registrationId,'payment_id':  paymentId},
+              success: function(){
+
+                  toastr.success('Etape de paiement finalisé, bienvenu à Nancy');
+
+              },
+          });
+
+      }
+
+      function linkPaymentToRegistration(registrationId,paymentId){
+
+          $.ajax({
+              type: "POST",
+              url: "/registration/payment/link",
+              data: {'_token': $('meta[name="_token"]').attr('content'), 'registration_id': registrationId,'payment_id':  paymentId},
+              success: function(){
+
+                  toastr.success('Etape du paiement validé, bienvenu à Nancy');
+
+              },
+          });
+
+      }
 
       function saveData(registrationData){
 
@@ -55,11 +116,10 @@
               type: "POST",
               url: "/registration/store",
               data: registrationData,
-              success: function(){
+              success: function(result){
 
-                  $('#success_message').css('visibility', 'visible');
-
-                  $('#success_message').fadeIn();
+                  console.log(result);
+                  toastr.success('Inscription enregistrée, bienvenu à Nancy');
 
               },
           });

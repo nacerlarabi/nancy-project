@@ -4,7 +4,7 @@
 	<div class="card-body">
 		<h5 class="card-title" data-aos="fade-up">{!! $card['title'] !!}</h5>
 		<div style="max-height: 250px;" class="card-text" data-aos="fade-up">{!! substr($card['content'],0,250) !!}...</div>
-		<p data-toggle="modal" data-target="#modal" class="card-text text-right" style="position: absolute; bottom: 0px;" data-aos="fade-up"><small class="text-muted">{!! $card['more'] !!}</small></p>
+
 	</div>
 </div>
 

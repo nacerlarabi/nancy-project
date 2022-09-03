@@ -24,8 +24,7 @@ https://templatemo.com/tm-538-digital-trend
 <!--<link href="{{ asset('css/swiper.css') }}"  rel="stylesheet">-->
 <link href="{{ asset('css/purpose.css') }}" rel="stylesheet">
 <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-
-
+<link href="/toastr.min.css" rel="stylesheet"/>
 
 
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
