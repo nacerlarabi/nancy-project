@@ -55,7 +55,7 @@
                 </div>
             </div>
             <p class="flex-containe text-center" data-aos="fade-up" data-aos-delay="200">
-                <a role="button" href="#" data-toggle="modal" class="btn btn-primary col-md-6 rounded-pill mt-6" data-target="#modal1" role="button">Inscrivez-vous pour profiter de nos programmes</a>
+                <a role="button" href="#" data-toggle="modal" class="btn btn-primary col-md-6 rounded-pill mt-6" data-target="#modal1" role="button" style="background-color: #1496E3; border-color: #1496E3;">Inscrivez-vous pour profiter de nos programmes</a>
             </p>
         </div>
     </section>
@@ -427,7 +427,7 @@
                                         du 29/06/2020 au 24/07/2020<br>
                                         + week end à Paris + grande excursion<br>
                                         Prix : 2090 €
-                                    <div class="mt-2 text-center"><a href="#" class="btn btn-primary col-md-4 rounded-pill formuleCta">choisir cette formule</a></div>
+                                    <div class="mt-2 text-center"><a href="#" class="btn btn-primary col-md-4 rounded-pill formuleCta" style="background-color: #1496E3; border-color: #1496E3;">choisir cette formule</a></div>
                                     </p>
                                 </div>
                             </div>
@@ -445,7 +445,7 @@
                                         du 29/06/2020 au 19/07/2020<br>
                                         + week end à Paris + grande excursion<br>
                                         Prix : 1800 €
-                                    <div class="mt-2 text-center"><a href="#" class="btn btn-primary col-md-4 rounded-pill formuleCta">choisir cette formule</a></div>
+                                    <div class="mt-2 text-center"><a href="#" class="btn btn-primary col-md-4 rounded-pill formuleCta" style="background-color: #1496E3; border-color: #1496E3;">choisir cette formule</a></div>
                                     </p>
                                 </div>
                             </div>
@@ -463,7 +463,7 @@
                                         du 29/06/2020 au 11/07/2020<br>
                                         + grande excursion<br>
                                         Prix : 1390 €
-                                    <div class="mt-2 text-center"><a href="#" class="btn btn-primary col-md-4 rounded-pill formuleCta">choisir cette formule</a></div>
+                                    <div class="mt-2 text-center"><a href="#" class="btn btn-primary col-md-4 rounded-pill formuleCta" style="background-color: #1496E3; border-color: #1496E3;">choisir cette formule</a></div>
                                     </p>
                                 </div>
                             </div>
@@ -487,7 +487,7 @@
                                         Cours seulement 8h30 - 12h30 et 14h - 15h30 (Sauf jours de sorties et départs d'excursions)<br>
                                         Pas de logement, repas, animations, cinéma, excursions d'une journée, soirées, Paris, Grande excursion<br>
                                         Prix : 250 €
-                                    <div class="mt-2 text-center"><a href="#" class="btn btn-primary col-md-4 rounded-pill formuleCta">choisir cette formule</a></div>
+                                    <div class="mt-2 text-center"><a href="#" class="btn btn-primary col-md-4 rounded-pill formuleCta" style="background-color: #1496E3; border-color: #1496E3;">choisir cette formule</a></div>
                                     </p>
                                 </div>
                             </div>
@@ -521,7 +521,7 @@
                             Sans le retour de la décharge parentale ET de la charte des mineurs signée au moment du versement de l'acompte de 250 euros (envoi par scan ET par courrier postal), l'inscription du mineur ne sera pas prise en compte.
                         </p>
                         <p class="flex-containe text-center" data-aos="fade-up" data-aos-delay="200">
-                            <a role="button" href="#" data-toggle="modal" class="btn btn-primary col-md-6 rounded-pill mt-6" data-target="#modal1" role="button">Inscrivez-vous pour profiter de nos programmes</a>
+                            <a role="button" href="#" data-toggle="modal" class="btn btn-primary col-md-6 rounded-pill mt-6" data-target="#modal1" style="background-color: #1496E3; border-color: #1496E3;">Inscrivez-vous pour profiter de nos programmes</a>
                         </p>
 
                     </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Services\ContentService;
+use App\Services\TestimonyService;
 use Illuminate\Http\Request;
 
 class HostingController extends Controller
@@ -30,7 +31,8 @@ class HostingController extends Controller
             'pages.sejour',
             [
                 "content" => $this->content
-            ]
+            ],
+
         );
     }
 }
