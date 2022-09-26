@@ -55,41 +55,59 @@
     <div class="container-fluid">
         <div class="row">
 
-            <div class="col-lg-12 col-12">
+            <div class="col-lg-12 col-12" >
 
-                <h2 class="mb-5 text-center" data-aos="fade-up">
+                <h2 class="mb-5 text-center" data-aos="fade-up" >
                     Ils témoignent ...
                     <strong>L'expérience unique </strong>
                 </h2>
-
-                <div class="owl-carousel owl-theme" data-items="1" data-sm-items="2" id="project-slide">
-                    @foreach ($testimonies as $testimonie)
-                    <div class="item project-wrapper" data-aos="fade-up" data-aos-delay="100">
-                        <img src="{{ asset($testimonie['picture']) }}" class="image-caste img-fluid" alt="project image">
-
-                        {{-- <div class="project-info"> --}}
-
-                        <div class="project-info">
-                            <a href="project-detail.html">
-                                <span>{!! \Illuminate\Support\Str::limit($testimonie['deposit'], 210, ' ...') !!}</span>
-                                <i class="fa fa-angle-right project-icon"></i>
-                            </a>
-                        </div>
-                        <p class="text-right"><small>{!! $testimonie['firstname'] !!} {!! $testimonie['lastname'] !!}- {!! $testimonie['occupation'] !!} - {!! $testimonie['country'] !!}</small></p>
-
-                        {{-- </div> --}}
-                    </div>
-                    @endforeach
-                </div>
             </div>
-
         </div>
     </div>
 </section>
 
-
+                <div class="test-imo" style="padding: 0;
+			font-family: 'Lato', sans-serif; background-color: #f0f8ff;">
+                    <section class="spacer" style="background-color: #f0f8ff;">
+                        <div class="testimonial-section">
+                            <div class="testi-user-img">
+                                <div class="swiper-container gallery-thumbs">
+                                    <div class="swiper-wrapper">
+                                        <?php $counter=count($testimonies)-1; ?>
+                    @foreach($testimonies as $testimonie)
+                                            <div class="swiper-slide">
+                        <img src="{{ asset($testimonie['picture']) }}" class="u<?php echo $counter; ?>" alt="project image">
+                                                <?php $counter-- ?>
+                        {{-- </div> --}}
+                    </div>
+                    @endforeach
+                                    </div>
+                                </div>
+                            </div>
+                                            <div class="user-saying" style="box-shadow: -117px -3px 109px -90px rgba(0,0,0,0.75);
+-webkit-box-shadow: -117px -3px 109px -90px rgba(0,0,0,0.75);
+-moz-box-shadow: -117px -3px 109px -90px rgba(0,0,0,0.75); z-index: 13;">
+                                                <div class="swiper-container testimonial">
+                                                    <!-- Additional required wrapper -->
+                                                    <section class="swiper-wrapper">
+                                            @foreach ($testimonies as $testimonie)
+                                                            <div class="swiper-slide">
+                                                                <div class="quote">
+                                                                    <img class="quote-icon" src="https://md-aqil.github.io/images/quote.png" alt="">
+                                                                    <p>{!! \Illuminate\Support\Str::limit($testimonie['deposit'], 350, ' ...') !!}</p>
+                                                                    <div class="name" style="color:black;">-{!! $testimonie['firstname'] !!} {!! $testimonie['lastname'] !!}-</div>
+                                                                    <div class="designation" style="color:black;">{!! $testimonie['occupation'] !!} - {!! $testimonie['country'] !!}</div>
+                                                                </div>
+                                                            </div>
+                                            @endforeach
+                                                    </section>
+                                                </div>
+                                            </div>
+                            </div>
+                    </section>
+</div>
 <!-- TESTIMONIAL -->
-<section class="testimonial section-padding">
+<section class="testimonial section-padding" style="background-color: #f0f8ff;">
     <div class="container">
         <div class="row">
 
@@ -121,7 +139,6 @@
         </div>
     </div>
 </section>
-
 </section>
 
 

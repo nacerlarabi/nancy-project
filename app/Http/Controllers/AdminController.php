@@ -217,6 +217,10 @@ class AdminController extends Controller
         $images = Picture::all();
         return view('admin.content.edit', ['content' => $id, 'images' => $images]);
 
+      //  return view('tes.content.view');
+
+
+
     }
 
 
@@ -230,7 +234,6 @@ class AdminController extends Controller
 
         $contentId = $request->content_id;
         $images = $request->images;
-
 
         $content = Content::find($contentId);
 

@@ -167,29 +167,76 @@
     <!-- fin medias-->
     <hr>
     <!-- section galerie -->
-    <section class="container" id="gallery">
+    <section class="container" style="min-width:100%">
         <h1 class="fh5co-lead to-animate fadeIn animated text-center"><strong>GALERIE</strong></h1><br>
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner pb-3">
-                <div class="carousel-item active ">
-                    <img src="{{ asset('images/project/7_.jpg') }}" class="d-block w-100" alt="..." style="height: 500px;">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{ asset('images/project/9_.jpg') }}" class="d-block w-100" alt="..." style="height: 500px;">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{ asset('images/project/10_.jpg') }}" class="d-block w-100" alt="..." style="height: 500px;">
+            <div style="background-color: #E8F6FE; width:100%; margin-bottom: 5%;">
+                <a class="elem" href="https://stage.france-summercourses.fr/images/project/7_.jpg">
+                    <span style="background-image: url(https://stage.france-summercourses.fr/images/project/7_.jpg);"></span>
+                </a>
+                <a class="elem" href="https://stage.france-summercourses.fr/images/project/9_.jpg">
+                    <span style="background-image: url(https://stage.france-summercourses.fr/images/project/9_.jpg);"></span>
+                </a>
+                <a class="elem" href="https://stage.france-summercourses.fr/images/project/10_.jpg">
+                    <span style="background-image: url(https://stage.france-summercourses.fr/images/project/10_.jpg);"></span>
+                </a>
+            </div>
+    </section>
+
+    <section class="project section-padding" id="project">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-lg-12 col-12" >
+
+                    <h2 class="mb-5 text-center" data-aos="fade-up" >
+                        Ils témoignent ...
+                        <strong>L'expérience unique </strong>
+                    </h2>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" style="height: 50px;width: 50px;background-color:black;border-radius: 15px;" aria-hidden="true"></span><span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" style="height: 50px;width: 50px;background-color:black;border-radius: 15px;" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
     </section>
+
+    <div class="test-imo" style="padding: 0;
+			font-family: 'Lato', sans-serif; background-color: #f0f8ff;">
+        <section class="spacer" style="background-color: #f0f8ff;">
+            <div class="testimonial-section">
+                <div class="testi-user-img">
+                    <div class="swiper-container gallery-thumbs">
+                        <div class="swiper-wrapper">
+                            <?php $counter=count($testimonies)-1; ?>
+                            @foreach($testimonies as $testimonie)
+                                <div class="swiper-slide">
+                                    <img src="{{ asset($testimonie['picture']) }}" class="u<?php echo $counter; ?>" alt="project image">
+                                    <?php $counter-- ?>
+                                    {{-- </div> --}}
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+                <div class="user-saying" style="box-shadow: -117px -3px 109px -90px rgba(0,0,0,0.75);
+-webkit-box-shadow: -117px -3px 109px -90px rgba(0,0,0,0.75);
+-moz-box-shadow: -117px -3px 109px -90px rgba(0,0,0,0.75); z-index: 13;">
+                    <div class="swiper-container testimonial">
+                        <!-- Additional required wrapper -->
+                        <section class="swiper-wrapper">
+                            @foreach ($testimonies as $testimonie)
+                                <div class="swiper-slide">
+                                    <div class="quote">
+                                        <img class="quote-icon" src="https://md-aqil.github.io/images/quote.png" alt="">
+                                        <p>{!! \Illuminate\Support\Str::limit($testimonie['deposit'], 350, ' ...') !!}</p>
+                                        <div class="name" style="color:black;">-{!! $testimonie['firstname'] !!} {!! $testimonie['lastname'] !!}-</div>
+                                        <div class="designation" style="color:black;">{!! $testimonie['occupation'] !!} - {!! $testimonie['country'] !!}</div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <!-- fin galerie -->
 @endsection

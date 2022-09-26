@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Services\ContentService;
 use App\Services\TeamService;
+use App\Services\TestimonyService;
 use Illuminate\Http\Request;
 
 class associationController extends Controller
@@ -29,7 +30,8 @@ class associationController extends Controller
     {
         return $this->view('pages.we', [
             'content' => $this->content,
-            'team' => (new TeamService())->get()
+            'team' => (new TeamService())->get(),
+            'testimonies' => TestimonyService::getAll()
         ]);
     }
 }
