@@ -1,6 +1,6 @@
 
 <!-- MAIN CSS -->
-<link rel="stylesheet" href="{{ asset('css/templatemo-digital-trend.css') }}">
+<link rel="stylesheet" href="{{ asset('css/templatemo-digital-trend-v1.css') }}">
 
 
 
