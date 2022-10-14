@@ -35,23 +35,23 @@
     <!-- Nav -->
     <nav id="nav">
         <ul class="links icons" style="margin: auto;">
-            <li class="">
-                <a href="/locale/en/">
+            <li class="" style="cursor:pointer;">
+                <a href="/locale/en/" style="cursor:pointer;">
                     <img style="cursor:pointer;" src="{{ asset('images/countries/head_en.png') }}" label="English"/>
                 </a>
             </li>
-            <li class="">
-                <a href="/locale/fr/">
+            <li class="" style="cursor:pointer;">
+                <a href="/locale/fr/" style="cursor:pointer;">
                     <img style="cursor:pointer;" src="{{ asset('images/countries/head_fr.png') }}" label="French"/>
                 </a>
             </li>
-            <li class="">
-                <a href="/locale/zh/">
+            <li class="" style="cursor:pointer;">
+                <a href="/locale/zh/" style="cursor:pointer;">
                     <img style="cursor:pointer;" src="{{ asset('images/countries/head_su.png') }}" label="chinese"/>
                 </a>
             </li>
-            <li class="">
-                <a href="/locale/ru/">
+            <li class="" style="cursor:pointer;">
+                <a href="/locale/ru/" style="cursor:pointer;">
                     <img style="cursor:pointer;" src="{{ asset('images/countries/head_ru.png') }}" label="russian"/>
                 </a>
             </li>
