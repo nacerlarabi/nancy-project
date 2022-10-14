@@ -360,7 +360,7 @@
             for(var i = 0; i < picker.options.length; i++) {
                 var selected = picker.options[i].hasAttribute('selected') ? ' aria-selected="true"' : '',
                     language = picker.options[i].getAttribute('lang');
-                list = list + '<li><a lang="'+language+'" hreflang="'+language+'" href="'+getLanguageUrl(picker.options[i])+'"'+selected+' role="option" data-value="'+picker.options[i].value+'" class="language-picker__item language-picker__flag language-picker__flag--'+picker.options[i].value+'"><span>'+picker.options[i].text+'</span></a></li>';
+                list = list + '<li onclick="location.href=\''+getLanguageUrl(picker.options[i])+'\'"><a lang="'+language+'" hreflang="'+language+'" href="'+getLanguageUrl(picker.options[i])+'"'+selected+' role="option" data-value="'+picker.options[i].value+'" class="language-picker__item language-picker__flag language-picker__flag--'+picker.options[i].value+'"><span>'+picker.options[i].text+'</span></a></li>';
             };
             return list;
         };
@@ -377,7 +377,7 @@
 
         function getLanguageUrl(option) {
 
-            return '/local/option.value';
+            return '/locale/'+option.value;
         };
 
         function initLanguageSelection(picker) {

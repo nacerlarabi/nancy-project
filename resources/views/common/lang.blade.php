@@ -4,10 +4,10 @@
             <form action="" class="language-picker__form">
                 <label for="language-picker-select">Select your language</label>
                 <select name="language-picker-select" id="language-picker-select">
-                    <option lang="fr" value="francais">Français</option>
-                    <option lang="en" value="english">English</option>
-                    <option lang="ru" value="russe">Russe</option>
-                    <option lang="ch" value="chinois">Chinese</option>
+                    <option lang="fr" value="fr">Français</option>
+                    <option lang="en" value="en">English</option>
+                    <option lang="ru" value="ru">Russe</option>
+                    <option lang="ch" value="su">Chinese</option>
                 </select>
             </form>
         </div></div>

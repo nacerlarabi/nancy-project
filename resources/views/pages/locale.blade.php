@@ -18,7 +18,7 @@
     <!-- Intro -->
     <div id="intro">Welcome to<br />
         <h1>France Summer Courses</h1>
-        <p>Choisissez votre langue </p>
+        <p>Choisissez votre langue</p>
         <p>Choose your language</p>
         <p>Выберите свой язык</p>
         <p>选择你的语言</p>

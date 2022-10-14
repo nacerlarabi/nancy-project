@@ -18,6 +18,17 @@ class LanguageController extends Controller
         }
 
         Session::put('locale', $locale);
-        return redirect('/');
+
+        if(str_contains(url()->previous(),'/locacle')){
+
+            return redirect('/');
+
+        }
+        else{
+
+            return redirect()->back();
+
+        }
+
     }
 }
