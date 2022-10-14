@@ -1,5 +1,5 @@
 
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse" id="navbarNav" style="margin-top: 40px;">
             <ul class="navbar-nav ml-auto">
                 @foreach($menu as $menuTab)
                     <li class="nav-item @if($menuTab['submenu']) dropdown @endif">

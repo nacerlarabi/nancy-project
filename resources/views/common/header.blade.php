@@ -7,30 +7,8 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
+        @include('common.extra-menu')
         @include('common.menu', ['menu' => $menu])
-        <nav id="langues" style="">
-            <ul class="links icons" style="margin: auto;">
-                <li class="">
-                    <a href="/locale/en/">
-                        <img src="{{ asset('images/countries/head_en.png') }}" label="English" />
-                    </a>
-                </li>
-                <li class="">
-                    <a href=" /locale/fr/">
-                    <img src="{{ asset('images/countries/head_fr.png') }}" label="French" />
-                    </a>
-                </li>
-                <li class="">
-                    <a href="/locale/zh/">
-                        <img src="{{ asset('images/countries/head_su.png') }}" label="chinese" />
-                    </a>
-                </li>
-                <li class="">
-                    <a href="/locale/ru/">
-                        <img src="{{ asset('images/countries/head_ru.png') }}" label="russian" />
-                    </a>
-                </li>
-            </ul>
-        </nav>
+
     </div>
 </nav>
