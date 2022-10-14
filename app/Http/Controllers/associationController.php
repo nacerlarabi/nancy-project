@@ -34,4 +34,10 @@ class associationController extends Controller
             'testimonies' => TestimonyService::getAll()
         ]);
     }
+
+    public function soon(){
+
+        return $this->view('pages.soon');
+
+    }
 }

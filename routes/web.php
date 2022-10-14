@@ -63,6 +63,8 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::get('/soon', 'associationController@soon');
+
 
 Route::get('/test/{page}', [App\Http\Controllers\ContentController::class, 'showList']);
 Auth::routes();
