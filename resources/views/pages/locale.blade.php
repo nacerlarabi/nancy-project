@@ -36,22 +36,22 @@
     <nav id="nav">
         <ul class="links icons" style="margin: auto;">
             <li class="" style="cursor:pointer;">
-                <a href="/locale/en/" style="cursor:pointer;">
+                <a href="/locale/en/" style="cursor:pointer; z-index: 99;">
                     <img style="cursor:pointer;" src="{{ asset('images/countries/head_en.png') }}" label="English"/>
                 </a>
             </li>
             <li class="" style="cursor:pointer;">
-                <a href="/locale/fr/" style="cursor:pointer;">
+                <a href="/locale/fr/" style="cursor:pointer; z-index: 99;">
                     <img style="cursor:pointer;" src="{{ asset('images/countries/head_fr.png') }}" label="French"/>
                 </a>
             </li>
             <li class="" style="cursor:pointer;">
-                <a href="/locale/zh/" style="cursor:pointer;">
+                <a href="/locale/zh/" style="cursor:pointer; z-index: 99;">
                     <img style="cursor:pointer;" src="{{ asset('images/countries/head_su.png') }}" label="chinese"/>
                 </a>
             </li>
             <li class="" style="cursor:pointer;">
-                <a href="/locale/ru/" style="cursor:pointer;">
+                <a href="/locale/ru/" style="cursor:pointer; z-index: 99;">
                     <img style="cursor:pointer;" src="{{ asset('images/countries/head_ru.png') }}" label="russian"/>
                 </a>
             </li>
