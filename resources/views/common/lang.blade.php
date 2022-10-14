@@ -4,10 +4,10 @@
             <form action="" class="language-picker__form">
                 <label for="language-picker-select">Select your language</label>
                 <select name="language-picker-select" id="language-picker-select">
-                    <option lang="fr" value="fr">Français</option>
-                    <option lang="en" value="en">English</option>
-                    <option lang="ru" value="ru">Russe</option>
-                    <option lang="ch" value="su">Chinese</option>
+                    <option lang="fr" value="fr" {{  Session::get('locale') == 'fr' ? 'selected' : '' }}>Français</option>
+                    <option lang="en" value="en" {{  Session::get('locale') == 'en' ? 'selected' : '' }}>English</option>
+                    <option lang="ru" value="ru" {{  Session::get('locale') == 'ru' ? 'selected' : '' }}>Russe</option>
+                    <option lang="zh" value="zh" {{  Session::get('locale') == 'zh' ? 'selected' : '' }}>Chinese</option>
                 </select>
             </form>
         </div></div>
