@@ -27,7 +27,7 @@ class AddFilePathToPaymentMandat extends Migration
      */
     public function down()
     {
-        Schema::table('payment_mandat', function (Blueprint $table) {
+        Schema::table('payment_mandate', function (Blueprint $table) {
             //
         });
     }

@@ -16,7 +16,7 @@
         "jeroennoten/laravel-adminlte": "^3.8",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
-        "laravel/ui": "^3.3",
+        "laravel/ui": "^3.4",
         "laravel/vapor-cli": "^1.22",
         "laravelcollective/html": "^6.3",
         "spatie/laravel-permission": "^5.5",

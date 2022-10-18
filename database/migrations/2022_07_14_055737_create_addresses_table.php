@@ -20,7 +20,7 @@ class CreateAddressesTable extends Migration
             $table->string('zipcode');
             $table->string('city');
             $table->string('country_id');
-            $table->boolean('is_ative');
+            $table->boolean('is_active');
             $table->boolean('is_default');
             $table->timestamps();
         });
