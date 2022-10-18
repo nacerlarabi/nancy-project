@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- HERO -->
-<section class="hero hero-bg d-flex justify-content-center align-items-center">
+<section class="hero hero-bg d-flex justify-content-center align-items-center" style="background-image: url('images/paris.jpg'); background-size: 100% 100%;">
     <div class="container">
         <div class="row">
 
@@ -14,11 +14,6 @@
                     <p class="text-white mt-3" data-aos="fade-up" data-aos-delay="100">{!! $content["home|init1"] !!}</p>
                     <p class="text-white mt-3" data-aos="fade-up" data-aos-delay="100">{!! $content["home|init2"] !!}</p>
                     <strong class="d-block py-3 pl-5 text-white" data-aos="fade-up" data-aos-delay="200"></strong>
-                </div>
-            </div>
-            <div class="col-lg-6 col-12 d-flex align-items-end flex-column">
-                <div class="hero-image" data-aos="fade-up" data-aos-delay="300">
-                    @include('layouts.image_mosaic')
                 </div>
             </div>
         </div>
