@@ -30,3 +30,6 @@ Homestead.json
 composer.lock
 package-lock.json
 sqltools_20210928231537_10037.log
+storage/debugbar
+storage/logs
+storage/framework/sessions/
