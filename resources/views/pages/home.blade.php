@@ -16,6 +16,12 @@
                     <strong class="d-block py-3 pl-5 text-white" data-aos="fade-up" data-aos-delay="200"></strong>
                 </div>
             </div>
+
+            <div class="col-lg-6 col-12 d-flex align-items-end flex-column">
+                <div class="hero-image" data-aos="fade-up" data-aos-delay="300">
+                    @include('layouts.image_mosaic')
+                </div>
+            </div>
         </div>
     </div>
 </section>
