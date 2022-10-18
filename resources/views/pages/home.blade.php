@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- HERO -->
-<section class="hero hero-bg d-flex justify-content-center align-items-center" style="background-image: url('images/paris.jpg'); background-size: 100% 100%;">
+<section class="hero hero-bg d-flex justify-content-center align-items-center">
     <div class="container">
         <div class="row">
 
