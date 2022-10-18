@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBookingStatusses extends Migration
+class CreateCountriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateBookingStatusses extends Migration
      */
     public function up()
     {
-        Schema::create('booking_statusses', function (Blueprint $table) {
+        Schema::create('countries', function (Blueprint $table) {
             $table->id();
-	    $table->string('slug');
-	    $table->string('name');
-            $table->boolean('is_active');
-            $table->softDeletes();
+            $table->integer('code')->nullable();
+            $table->string('alpha2')->nullable();
+            $table->string('alpha3')->nullable();
+            $table->string('nom_en_gb')->nullable();
+            $table->string('nom_fr_fr')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ class CreateBookingStatusses extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('booking_statusses');
+        Schema::dropIfExists('countries');
     }
 }

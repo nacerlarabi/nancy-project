@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePackagePrograms extends Migration
+class CreateTypeSejoursTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreatePackagePrograms extends Migration
      */
     public function up()
     {
-        Schema::create('package_programs', function (Blueprint $table) {
+        Schema::create('type_sejours', function (Blueprint $table) {
             $table->id();
-            $table->integer('package_id');
-            $table->string('program_id');
-       	    $table->integer('ordre');
-            $table->boolean('is_active');
-            $table->softDeletes();
+            $table->string('mnemonic')->nullable();
+            $table->string('title_fr')->nullable();
+            $table->string('title_en')->nullable();
+
             $table->timestamps();
         });
     }
@@ -31,7 +30,6 @@ class CreatePackagePrograms extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('package_programs');
+        Schema::dropIfExists('type_sejours');
     }
 }
-
