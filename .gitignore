@@ -1,6 +1,12 @@
 **/vendor 
 .env
 **/.idea
-**/vendor
 **/storage
-
+**/webpack.mix.js
+**/bootstrap
+**/tests
+.DS_Store
+composer.lock
+package-lock.json
+sqltools_20210928231537_10037.log
+artisan
