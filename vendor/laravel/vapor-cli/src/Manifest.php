@@ -13,6 +13,10 @@ class Manifest
      */
     public static function id()
     {
+        if (! array_key_exists('id', static::current() ?? [])) {
+            Helpers::abort(sprintf('Invalid project ID. Please verify your Vapor manifest at [%s].', Path::manifest()));
+        }
+
         return static::current()['id'];
     }
 
@@ -23,6 +27,10 @@ class Manifest
      */
     public static function name()
     {
+        if (! array_key_exists('name', static::current() ?? [])) {
+            Helpers::abort(sprintf('Invalid project name. Please verify your Vapor manifest at [%s].', Path::manifest()));
+        }
+
         return static::current()['name'];
     }
 
@@ -212,31 +220,38 @@ class Manifest
      */
     protected static function freshConfiguration($project)
     {
-        static::write(array_filter([
-            'id'           => $project['id'],
-            'name'         => $project['name'],
-            'environments' => [
-                'production' => array_filter([
-                    'memory'     => 1024,
-                    'cli-memory' => 512,
-                    'runtime'    => 'php-8.1:al2',
-                    'build'      => [
-                        'COMPOSER_MIRROR_PATH_REPOS=1 composer install --no-dev',
-                        'php artisan event:cache',
-                        'npm ci && npm run prod && rm -rf node_modules',
-                    ],
-                ]),
-                'staging' => array_filter([
-                    'memory'     => 1024,
-                    'cli-memory' => 512,
-                    'runtime'    => 'php-8.1:al2',
-                    'build'      => [
-                        'COMPOSER_MIRROR_PATH_REPOS=1 composer install',
-                        'php artisan event:cache',
-                        'npm ci && npm run dev && rm -rf node_modules',
-                    ],
-                ]),
+        $environments['production'] = array_filter([
+            'memory' => 1024,
+            'cli-memory' => 512,
+            'runtime' => 'php-8.1:al2',
+            'build' => [
+                'COMPOSER_MIRROR_PATH_REPOS=1 composer install --no-dev',
+                'php artisan event:cache',
+                file_exists(Path::current().'/webpack.mix.js')
+                    ? 'npm ci && npm run prod && rm -rf node_modules'
+                    : 'npm ci && npm run build && rm -rf node_modules',
             ],
+        ]);
+
+        if (! (isset($project['is_sandboxed']) && $project['is_sandboxed'])) {
+            $environments['staging'] = array_filter([
+                'memory' => 1024,
+                'cli-memory' => 512,
+                'runtime' => 'php-8.1:al2',
+                'build' => [
+                    'COMPOSER_MIRROR_PATH_REPOS=1 composer install',
+                    'php artisan event:cache',
+                    file_exists(Path::current().'/webpack.mix.js')
+                        ? 'npm ci && npm run dev && rm -rf node_modules'
+                        : 'npm ci && npm run build && rm -rf node_modules',
+                ],
+            ]);
+        }
+
+        static::write(array_filter([
+            'id' => $project['id'],
+            'name' => $project['name'],
+            'environments' => $environments,
         ]));
     }
 
