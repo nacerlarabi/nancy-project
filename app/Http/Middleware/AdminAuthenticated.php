@@ -23,6 +23,7 @@ class AdminAuthenticated
             /** @var User $user */
             $user = Auth::user();
 
+
             if ( $user->hasRole('admin') or $user->hasRole('super-admin')) {
                 return $next($request);
             }

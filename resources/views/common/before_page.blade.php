@@ -2,8 +2,6 @@
 <!-- MAIN CSS -->
 <link rel="stylesheet" href="{{ asset('css/templatemo-digital-trend-v1.css') }}">
 
-
-
 <!-- SCRIPTS -->
 
 <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
@@ -36,27 +34,33 @@
 <script src="https://md-aqil.github.io/images/swiper.min.js"></script>
 
 <script>
+
+    if (window.screen.width < 1440) {
+
+        $('.test-imo').hide();
+    }
+    else{
+
+        $('.test-imo-mobile').hide();
+
+    }
+
+</script>
+
+<script>
     var galleryThumbs = new Swiper('.gallery-thumbs', {
         effect: 'coverflow',
-        grabCursor: true,
+        loop: true,
+        grabCursor: false,
         centeredSlides: true,
-        slidesPerView: '2',
-        // coverflowEffect: {
-        //   rotate: 50,
-        //   stretch: 0,
-        //   depth: 100,
-        //   modifier: 1,
-        //   slideShadows : true,
-        // },
-
+        slidesPerView: 'auto',
         coverflowEffect: {
-            rotate: 0,
-            stretch: 0,
-            depth: 50,
-            modifier: 6,
-            slideShadows : false,
+           rotate: 0,
+           stretch: 80,
+           depth: 200,
+           modifier: 1,
+           slideShadows : false,
         },
-
     });
 
 
@@ -69,7 +73,7 @@
         },
         direction: 'vertical',
         pagination: {
-            clickable: true,
+            clickable: false,
             el: '.swiper-pagination',
             type: 'bullets',
         },
@@ -92,7 +96,6 @@
     $('[data-ssd-confirm-trigger]').ssdConfirm();
 
     $('.dropdown').hover(function(){
-        console.log('test');
         $('.dropdown-toggle', this).trigger('click');
     });
 
@@ -429,6 +432,24 @@
         }
     }());</script>
 
+<script>
+
+    var mobileTestImo = new Swiper('.mobile-test-imo', {
+        speed: 600,
+        parallax: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        slidesPerView: 'auto',
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+
+    });
 
 
-bjhpikjlkjlkmmlkmmkjllkllkjnj   >lnnjliknl:nnn:;:hkkkuoi hklkkjolkiiiiophnjjikjpiià^^jjg
+
+
+</script>

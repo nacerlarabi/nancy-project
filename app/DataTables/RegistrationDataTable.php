@@ -70,20 +70,19 @@ class RegistrationDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            Column::make('Gender'),
-            Column::make('First_name'),
-            Column::make('Last_name'),
-            Column::make('Birthdate'),
-            Column::make('Phone'),
-            Column::make('Email'),
-            Column::make('Level'),
-            Column::make('Courses_choice'),
-            Column::make('Level_certificate'),
-            Column::make('Staying_type'),
-            Column::make('Nationality'),
-            Column::make('Address'),
-            Column::make('Fiche inscription','Fiche inscription'),
-            Column::make("Confirmer l'inscription","Confirmer l'inscription")
+            Column::make('gender'),
+            Column::make('first_name'),
+            Column::make('last_name'),
+            Column::make('birthdate'),
+            Column::make('phone'),
+            Column::make('email'),
+            Column::make('level'),
+            Column::make('courses_choice'),
+            Column::make('level_certificate'),
+            Column::make('staying_type'),
+            Column::make('nationality'),
+            Column::make('address'),
+            Column::make('Fiche inscription','Fiche inscription')
         ];
     }
 

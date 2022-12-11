@@ -95,6 +95,14 @@
     <link rel="stylesheet" href="/vendor/adminlte/plugins/bs-stepper/css/bs-stepper.min.css">
 
     <link rel="stylesheet" href="/vendor/adminlte/plugins/dropzone/min/dropzone.min.css">
+
+    <style>
+        .preloader{
+
+            display : none;
+        }
+
+    </style>
 @stop
 
 @section('js')

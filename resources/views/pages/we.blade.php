@@ -217,7 +217,7 @@
                 </div>
                 <div class="user-saying" style="box-shadow: -117px -3px 109px -90px rgba(0,0,0,0.75);
 -webkit-box-shadow: -117px -3px 109px -90px rgba(0,0,0,0.75);
--moz-box-shadow: -117px -3px 109px -90px rgba(0,0,0,0.75); z-index: 13;">
+-moz-box-shadow: -117px -3px 109px -90px rgba(0,0,0,0.75); z-index: 1;">
                     <div class="swiper-container testimonial">
                         <!-- Additional required wrapper -->
                         <section class="swiper-wrapper">

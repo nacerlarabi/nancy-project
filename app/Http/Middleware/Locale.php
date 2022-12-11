@@ -29,6 +29,7 @@ class Locale
             return $next($request);
         }
 
-        return redirect()->route('get-locale');
+        return $next($request);
+
     }
 }

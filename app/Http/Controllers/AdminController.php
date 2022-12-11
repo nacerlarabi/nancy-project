@@ -10,6 +10,7 @@ use App\Models\Content;
 use App\Models\Picture;
 use App\Models\SessionSubscruption;
 use App\Models\User;
+use PDF;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\DataTables\RegistrationDataTable;
@@ -261,6 +262,18 @@ class AdminController extends Controller
         $content->update();
 
         return  response()->json(['status' => 200]);
+
+   }
+
+   public function generateSubscriptionPdf(Registration $registration){
+
+       $pdfData = [
+           'registration' => $registration,
+       ];
+
+       $pdf = PDF::setOptions(['isHtml5ParserEnabled' => true, 'isRemoteEnabled' => true])->loadView('admin.registration-pdf', $pdfData);
+
+       return $pdf->download($registration->first_name.'_'.$registration->last_name.'.pdf');
 
    }
 

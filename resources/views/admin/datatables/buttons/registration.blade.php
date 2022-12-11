@@ -1,1 +1,1 @@
-<a class="btn btn-primary" href="">Modifier</a>
+<a class="btn btn-primary" href="/admin/registration/{{ $row->id }}" target="__blank">Fiche</a>
