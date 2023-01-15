@@ -31,12 +31,12 @@ https://templatemo.com/tm-538-digital-trend
 }
 
 :root {
-  --primary-color:        #5983ea;
+  --primary-color:        #041635;
   --secondary-color:      #f1c111;
   --white-color:          #ffffff;
   --dark-color:           #171819;
   --project-bg:           #f0f8ff;
-  --menu-bg:              #5983ea;
+  --menu-bg:              #041635;
 
   --title-color:          #15141a;
   --gray-color:           #909090;
@@ -252,7 +252,7 @@ a:focus {
   left: 0;
   padding: 2em .5em;
   position: fixed;
-  /* transition: all .3s linear; */
+  transition: all .3s linear;
 }
 
 .navbar.wrap {
@@ -759,7 +759,7 @@ a:focus {
 -----------------------------------------*/
 
 .site-footer {
-  background: var(--dark-color);
+  background: var(--menu-bg);;
   padding: 2em 0 1em 0;
   word-break: break-word;
 }
@@ -815,7 +815,7 @@ a:focus {
 .social-icon {
   position: relative;
   padding: 0;
-  margin: 4em 0 0 0;
+  margin: 0 0 0 0;
 }
 
 .social-icon li {
@@ -863,7 +863,7 @@ a:focus {
   }
 
   .navbar {
-    padding: 1em;
+    padding: 0em 1em 1em 1em;
   }
 
   .navbar-collapse {
@@ -935,14 +935,7 @@ a:focus {
 }
 
 .extra-menu{
-
-  width: 110%;
-  height: 30px;
-  position: absolute;
-  background-color: #5983ea;
-  top:0;
-  left:0;
-
+  background-color: var(--menu-bg);
 }
 
 .language-picker {

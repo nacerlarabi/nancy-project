@@ -2,8 +2,14 @@
 
 @section('contenu')
     <br>
-    <p></p>
-
+    <p>test</p>
+    <div class="position-relative"> <div class="position-absolute top-50 start-50">
+            <ul class="list-inline">
+                <li><a href="#" class="fa fa-instagram" style="color:white;"></a></li>
+                <li><a href="#" class="fa fa-twitter" style="color:white;"></a></li>
+                <li><a href="#" class="fa fa-facebook" style="color:white;"></a></li>
+            </ul>
+        </div></div>
     <div class="col-sm-offset-4 col-sm-4">
         <div class="panel panel-info">
             <div class="panel-heading">Ajout de contenu</div>
