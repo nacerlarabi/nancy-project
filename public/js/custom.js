@@ -149,7 +149,9 @@
         }
 
         $('html, body').stop().animate({
-          scrollTop: $($anchor).offset().top - 0
+            if ($anchor) {
+                scrollTop: $($anchor).offset().top - 0
+            }
         }, 1000);
           event.preventDefault();
       });

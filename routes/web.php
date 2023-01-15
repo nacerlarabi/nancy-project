@@ -67,7 +67,7 @@ Route::get('/', 'HomeController@index');
 
 
 Route::get('/contact', function () {
-    return view('contact');
+    return view('pages.welcome');
 });
 
 Route::get('/soon', 'associationController@soon');
