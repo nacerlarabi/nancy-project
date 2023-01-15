@@ -16,6 +16,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //Route::controller('content', 'ContentController');
+
+Route::get('/testpdf', function(){
+
+    return view('admin.registration-pdf');
+
+});
+
 Route::name('get-locale')->get('/locale', 'LanguageController@index');
 Route::name('set-locale')->get('locale/{locale?}', 'LanguageController@setLocale');
 
@@ -82,6 +89,7 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function 
     Route::post('/sessions/new','AdminController@newSession');
     Route::get('/password/change','AdminController@changePasswordPage');
     Route::post('/password/change/submit','AdminController@updatePassword');
+    Route::get('/registration/{registration}','AdminController@generateSubscriptionPdf');
 
     Route::get('/contents','AdminController@contents');
     Route::get('/content/edit/{id}', 'AdminController@edit')->name('admin.content.edit');

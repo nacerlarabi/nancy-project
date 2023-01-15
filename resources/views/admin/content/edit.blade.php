@@ -205,6 +205,14 @@
         }
 
     </style>
+
+    <style>
+        .preloader{
+
+            display : none;
+        }
+
+    </style>
 @stop
 
 @section('js')

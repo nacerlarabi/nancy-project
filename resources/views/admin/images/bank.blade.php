@@ -91,6 +91,14 @@
             margin-top: -25%;
         }
     </style>
+
+    <style>
+        .preloader{
+
+            display : none;
+        }
+
+    </style>
 @stop
 
 @section('js')

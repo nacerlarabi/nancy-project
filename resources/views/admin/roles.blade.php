@@ -12,6 +12,14 @@
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
+
+    <style>
+        .preloader{
+
+            display : none;
+        }
+
+    </style>
 @stop
 
 @section('js')
